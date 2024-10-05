@@ -1,4 +1,4 @@
-package com.ossipeeriver.ravenawarenesskit.theme
+package com.ossipeeriver.ravenawarenesskit.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF735C0C)

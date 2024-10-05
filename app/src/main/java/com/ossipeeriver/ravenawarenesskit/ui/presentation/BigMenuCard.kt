@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import org.w3c.dom.Text
 
 @Composable
-fun MenuCard(
+fun BigMenuCard(
     modifier: Modifier,
     menuCardHeader: String
 ) {
@@ -31,13 +31,13 @@ fun MenuCard(
         colors = CardDefaults
             .cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         modifier = modifier
-            .size(width = 240.dp, height = 100.dp),
+            .size(width = 240.dp, height = 150.dp),
         onClick = {}
     ) {
         Box(
             modifier
                 .fillMaxWidth()
-                .height(110.dp),
+                .height(145.dp),
             contentAlignment = Alignment.Center
         ) {
             Text(
@@ -52,7 +52,7 @@ fun MenuCard(
 
 @Preview
 @Composable
-fun MenuCardPreview() {
+fun BigMenuCardPreview() {
     MenuCard(
         modifier = Modifier,
         "Contracts")
