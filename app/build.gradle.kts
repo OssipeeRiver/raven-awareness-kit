@@ -1,3 +1,6 @@
+import java.io.IOException
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -19,6 +22,32 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        val apiKeysFile = project.rootProject.file("apikeys.properties")
+        val properties = Properties()
+
+        if (apiKeysFile.exists()) {
+            try {
+                properties.load(apiKeysFile.inputStream())
+
+                properties.forEach { key, value ->
+                    val keyStr = key as String
+                    val valueStr = value as String
+
+                    buildConfigField(
+                        type = "String",
+                        name = keyStr.uppercase(),
+                        value = "\"$valueStr\""
+                    )
+                }
+            } catch (e: NoSuchFileException) {
+                throw GradleException("apikeys.properties file not found")
+            } catch (e: IOException) {
+                throw GradleException("failded to read apikeys.properties file")
+            }
+        } else {
+            throw GradleException("API keys file not found: ${apiKeysFile.path}")
+        }
     }
 
     buildTypes {
@@ -38,6 +67,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeOptions {

@@ -10,6 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.arcgismaps.ApiKey
+import com.arcgismaps.ArcGISEnvironment
 import com.arcgismaps.geometry.Point
 import com.arcgismaps.geometry.SpatialReference
 import com.arcgismaps.mapping.ArcGISScene
@@ -19,12 +21,13 @@ import com.arcgismaps.mapping.Surface
 import com.arcgismaps.mapping.Viewpoint
 import com.arcgismaps.mapping.view.Camera
 import com.arcgismaps.toolkit.geoviewcompose.SceneView
-
+import com.ossipeeriver.ravenawarenesskit.BuildConfig
 
 @Composable
 fun EsriScreen() {
 
     val scene = remember {
+        setEsriApiKey()
         createScene()
     }
 
@@ -66,7 +69,11 @@ fun createScene(): ArcGISScene {
         initialViewpoint = Viewpoint(cameraLocation, camera)
 
     }
+}
 
+private fun setEsriApiKey() {
+    val ESRI_KEY = BuildConfig.ESRI_KEY
+    ArcGISEnvironment.apiKey = ApiKey.create(ESRI_KEY)
 }
 
 @Preview
@@ -74,3 +81,5 @@ fun createScene(): ArcGISScene {
 fun EriScreenPreview() {
     EsriScreen()
 }
+
+
