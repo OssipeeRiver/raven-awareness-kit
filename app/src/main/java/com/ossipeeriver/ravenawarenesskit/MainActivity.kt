@@ -6,8 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.ossipeeriver.ravenawarenesskit.ui.screens.EsriScreen
-import com.ossipeeriver.ravenawarenesskit.ui.screens.HomeScreen
+import com.ossipeeriver.ravenawarenesskit.ui.esri.EsriScreen
 import com.ossipeeriver.ravenawarenesskit.ui.theme.RavenAwarenessKitTheme
 
 class MainActivity : ComponentActivity() {

@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.ossipeeriver.ravenawarenesskit.ui.screens
+package com.ossipeeriver.ravenawarenesskit.ui.esri
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding

@@ -1,4 +1,4 @@
-package com.ossipeeriver.ravenawarenesskit.ui.screens
+package com.ossipeeriver.ravenawarenesskit.ui.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.ossipeeriver.ravenawarenesskit.ui.presentation.BigMenuCard
-import com.ossipeeriver.ravenawarenesskit.ui.presentation.MenuCard
+import com.ossipeeriver.ravenawarenesskit.ui.components.BigMenuCard
+import com.ossipeeriver.ravenawarenesskit.ui.components.MenuCard
 import com.ossipeeriver.ravenawarenesskit.ui.theme.RavenAwarenessKitTheme
 
 @Composable
