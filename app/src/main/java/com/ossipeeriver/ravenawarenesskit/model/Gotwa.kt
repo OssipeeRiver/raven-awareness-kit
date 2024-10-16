@@ -1,11 +1,17 @@
 package com.ossipeeriver.ravenawarenesskit.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.Date
 
+@Entity(tableName = "gotwa")
 data class Gotwa(
-    val user: String,
+    @PrimaryKey val plan: String,
+    val currentLocation: String,
+    val whereLeadersGoing: String,
+    val othersTakingWith: String,
     val timeOfDeploy: Date,
-    val timeExpected: Double,
+    val expectedTimeOfReturn: Double,
     val ifNoReturn: String,
-    val contactActions: String
+    val ifContactActions: String
 )

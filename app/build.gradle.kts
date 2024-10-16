@@ -96,6 +96,7 @@ dependencies {
     implementation(libs.retrofitSerializationConverter)
     implementation(libs.coilCompose)
     implementation(libs.firebaseCrashlyticsBuildTools)
+    implementation(libs.androidx.room.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
