@@ -1,9 +1,13 @@
 package com.ossipeeriver.ravenawarenesskit.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlinx.serialization.Serializable
 
 @Serializable
+@Entity(tableName = "contract")
 data class Contract(
+    @PrimaryKey(autoGenerate = true) val id: String,
     val location: String,
     val payRate: String,
     val employmentType: String,
