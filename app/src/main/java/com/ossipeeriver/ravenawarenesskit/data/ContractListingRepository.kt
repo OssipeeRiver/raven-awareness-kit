@@ -1,6 +1,6 @@
 package com.ossipeeriver.ravenawarenesskit.data
 
-import com.ossipeeriver.ravenawarenesskit.data.network.ContractApiService
+import com.ossipeeriver.ravenawarenesskit.data.networkServices.ContractApiService
 import com.ossipeeriver.ravenawarenesskit.model.Contract
 
 interface ContractListingRepository {

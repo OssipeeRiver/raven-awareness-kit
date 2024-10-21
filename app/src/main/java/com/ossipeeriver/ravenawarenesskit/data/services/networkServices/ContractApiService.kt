@@ -1,4 +1,4 @@
-package com.ossipeeriver.ravenawarenesskit.data.network
+package com.ossipeeriver.ravenawarenesskit.data.networkServices
 
 import com.ossipeeriver.ravenawarenesskit.model.Contract
 import retrofit2.http.GET

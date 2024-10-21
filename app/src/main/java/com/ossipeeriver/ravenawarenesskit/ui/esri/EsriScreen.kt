@@ -22,6 +22,7 @@ import com.arcgismaps.mapping.Viewpoint
 import com.arcgismaps.mapping.view.Camera
 import com.arcgismaps.toolkit.geoviewcompose.SceneView
 import com.ossipeeriver.ravenawarenesskit.BuildConfig
+import com.ossipeeriver.ravenawarenesskit.data.constants.EsriConstants.ESRI_3D_SOURCE
 
 @Composable
 fun EsriScreen() {
@@ -42,7 +43,8 @@ fun EsriScreen() {
 }
 
 fun createScene(): ArcGISScene {
-    val elevationSource = ArcGISTiledElevationSource("https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer")
+    val uri = ESRI_3D_SOURCE
+    val elevationSource = ArcGISTiledElevationSource(uri)
     val surface = Surface().apply {
         elevationSources.add(elevationSource)
         elevationExaggeration = 2.5f
